@@ -325,38 +325,152 @@ div.tocify {
 </div>
 <div id="component-testing" class="section level1">
 <h1>Component Testing</h1>
+<div id="description" class="section level3">
+<h3>Description</h3>
 <p>“Component testing is a method where testing of each component in an application is done separately. Suppose, in an application there are 5 components. Testing of each 5 components separately and efficiently is called as component testing.” -<a href="http://istqbexamcertification.com/what-is-component-testing/" class="uri">http://istqbexamcertification.com/what-is-component-testing/</a></p>
 <p>During component testing, all objects are tested to ensure they work together as specified by the physical design. If issues are discovered, the project returns to the implementation phase for corrective action.</p>
-<p><em>coming soon</em></p>
+</div>
+<div id="testing" class="section level3">
+<h3>Testing</h3>
+<p>The shiny application is going to be ported to a production environment within NCMEC at some point, but right now they are unsure about how exactly they want to roll it out. Discussions are currently being had about additions to the application and various hosting options, but right now it was built to run in a shinyapps.io environment. This website hosts shiny applications, and I’m currently working in the free tier. This means that if more than 10 hours of the application were accessed within one week, then the app would slow down significantly. To improve accessibility in the shinyapps.io environment, I could upgrade my account.</p>
+<p>The shiny app has been pushed to shinyapps.io, and I’ve verified that it runs on multiple browsers.</p>
+<ul>
+<li>Confirmed on Google Chrome</li>
+<li>Confirmed on Safari</li>
+<li>Confirmed on Firefox</li>
+<li>Confirmed on Microsoft Edge</li>
+</ul>
+<p>The link to the live demo:</p>
+<p><a href="https://cjsegneri.shinyapps.io/NCMEC-Data-View/" class="uri">https://cjsegneri.shinyapps.io/NCMEC-Data-View/</a></p>
 <hr />
+</div>
 </div>
 <div id="unit-testing" class="section level1">
 <h1>Unit Testing</h1>
+<div id="description-1" class="section level3">
+<h3>Description</h3>
 <p>“A unit test is the smallest testable part of an application like functions, classes, procedures, interfaces. Unit testing is a method by which individual units of source code are tested to determine if they are fit for use.” -<a href="http://istqbexamcertification.com/?s=unit+testing" class="uri">http://istqbexamcertification.com/?s=unit+testing</a></p>
 <p>Test each module individually. Detailed scripts are used in the development and test phases for evaluating the completeness and correctness of the smallest parts of the system and the components created from those parts. Also included are test scripts that are high-level and more focused on processes.</p>
-<p><em>coming soon</em></p>
+</div>
+<div id="testing-1" class="section level3">
+<h3>Testing</h3>
+<div id="data-collection" class="section level5">
+<h5>Data Collection</h5>
+<p>This app currently imports data from two csv files. If the nodes show up on the map, then the data import correctly.</p>
+<center>
+Results
+</center>
+<p>The data nodes appeared on the application when it was loaded. The data collection procedure works as planned.</p>
+<center>
+Visualized Results
+</center>
+<div class="figure">
+<img src="images/m4_map.png" />
+
+</div>
+</div>
+<div id="analytical-engine" class="section level5">
+<h5>Analytical Engine</h5>
+<p>The analytical engine is what filters the data based on the characteristics that are entered by the user. To test if this works, I’ve displayed and gone through the data that is being filtered in the back end. I’ve verified that my analytical engine does what it is supposed to do by analyzing the specific data output that it returns based on various filtering options.</p>
+</div>
+<div id="output" class="section level5">
+<h5>Output</h5>
+<p>Testing the output is simply testing to see if the appropriate data displays on the map based on the filters. To test this, I’ve had people use my application and select the nodes to see if the appropriate instances are appearing. The nodes should display characteristics that coincide with the filters.</p>
 <hr />
+</div>
+</div>
 </div>
 <div id="requirements-testing" class="section level1">
 <h1>Requirements Testing</h1>
+<div id="description-2" class="section level3">
+<h3>Description</h3>
 <p>“Requirements-based testing is a testing approach in which test cases, conditions and data are derived from requirements. It includes functional tests and also non-functional attributes such as performance, reliability or usability.” -<a href="https://www.tutorialspoint.com/software_testing_dictionary/requirements_based_testing.htm" class="uri">https://www.tutorialspoint.com/software_testing_dictionary/requirements_based_testing.htm</a></p>
 <p>Once the components are tested and the system operates as designed, the application is tested against the requirements gathered in the requirements phase of development. Ensure that all requirements map to test scenarios.</p>
-<p><em>coming soon</em></p>
+</div>
+<div id="testing-2" class="section level3">
+<h3>Testing</h3>
+<p>Since the functional requirements in were already working by milestone 4, they were all verified as functional in milestone 4’s “Mapping Functional Requirements” section. This section is repeated below:</p>
+<div id="viewing" class="section level5">
+<h5>Viewing</h5>
+<table>
+<thead>
+<tr class="header">
+<th align="left">Functional_Requirement</th>
+<th align="left">Code_Functions</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">Displaying NCMEC data in a map.</td>
+<td align="left">server.R, output$map</td>
+</tr>
+</tbody>
+</table>
+<p><strong>In App</strong></p>
+<center>
+<img src="images/m4_map.png" />
+</center>
+<p><br></p>
+</div>
+<div id="filtering" class="section level5">
+<h5>Filtering</h5>
+<table>
+<thead>
+<tr class="header">
+<th align="left">Functional_Requirement</th>
+<th align="left">Code_Functions</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">Allowing for filtering of NCMEC data.</td>
+<td align="left">server.R, whichSets(), getMissing(), getKidnapping()</td>
+</tr>
+</tbody>
+</table>
+<p><strong>In App</strong></p>
+<center>
+<img src="images/m2_missing_tab.png" width="400" />
+</center>
+<p><br></p>
+</div>
+<div id="downloading" class="section level5">
+<h5>Downloading</h5>
+<table>
+<thead>
+<tr class="header">
+<th align="left">Functional_Requirement</th>
+<th align="left">Code_Functions</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">Allows for downloading filtered NCMEC data.</td>
+<td align="left">server.R, output$download_link</td>
+</tr>
+</tbody>
+</table>
+<p><strong>In App</strong></p>
+<center>
+<img src="images/m4_download.png" width="300" />
+</center>
+<p><br></p>
 <hr />
 </div>
-<div id="system-testing" class="section level1">
-<h1>System Testing</h1>
-<p>“In system testing the behavior of whole system/product is tested as defined by the scope of the development project or product.” -<a href="http://istqbexamcertification.com/?s=system+testing" class="uri">http://istqbexamcertification.com/?s=system+testing</a></p>
-<p>System testing verifies that all components of the functional business requirements, business processes, data flows, and other system criteria are met. The developer(s) tests specific end-to-end relevant processes until the complete application environment mimics the intended use upon release.</p>
-<p><em>coming soon</em></p>
-<hr />
+</div>
 </div>
 <div id="acceptance-testing" class="section level1">
 <h1>Acceptance Testing</h1>
+<div id="description-3" class="section level3">
+<h3>Description</h3>
 <p>“After the system test has corrected all or most defects, the system will be delivered to the user or customer for Acceptance Testing or User Acceptance Testing (UAT). Acceptance testing is basically done by the user or customer although other stakeholders may be involved as well.” -<a href="http://istqbexamcertification.com/?s=acceptance+testing" class="uri">http://istqbexamcertification.com/?s=acceptance+testing</a></p>
 <p>The User Acceptance Test (UAT) validates that the system, as a whole, meets mutually agreed-upon requirements. UAT is completed by end-users of the application and occurs before a client or customer accepts the new system.</p>
-<p><em>coming soon</em></p>
+</div>
+<div id="testing-3" class="section level3">
+<h3>Testing</h3>
+<p>The National Council for Missing and Exploited Children are currently in the process of testing my application and adding suggestions to features they want to see added. They’ve shown interest in using the application that I’ve made, and meetings have been set for further discussion to this end. That being said, they do not have any specific feedback as of yet, but this section will be updated when they do.</p>
 <hr />
+</div>
 </div>
 
 
