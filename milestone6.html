@@ -336,7 +336,7 @@ div.tocify {
 <hr />
 <div id="project-review" class="section level1">
 <h1>Project Review</h1>
-<p>Below is a list of all the project requirements, whether they were achieved or not, and the justification as to why if it was not completed.</p>
+<p>Below is a list of all the project requirements, whether they were achieved or not, and the justification as to why if they were not completed.</p>
 <table>
 <thead>
 <tr class="header">
@@ -352,7 +352,7 @@ div.tocify {
 <td align="left">Not Required</td>
 </tr>
 <tr class="even">
-<td align="left">Allowing for filtering of NCMEC data.</td>
+<td align="left">Allows for filtering of NCMEC data.</td>
 <td align="left">Yes</td>
 <td align="left">Not Required</td>
 </tr>
@@ -367,15 +367,35 @@ div.tocify {
 </div>
 <div id="project-documentation-review" class="section level1">
 <h1>Project Documentation Review</h1>
+<div id="application-guide" class="section level3">
+<h3>Application Guide</h3>
+<p>The main component for this application is the data map. When the application is loaded, the data map will be displayed. Use the legend in the bottom left to determine which colors represent with data sets. Each node on the map represents one incident. The nodes are clustered so that the map is not cluttered to the point where it is no longer legible. To view a cluster, click on it. The map with zoom in to the area that the cluster represents. You can also zoom by scrolling in/out on the mouse. Once a single node is visible on the map, you can click on it to see all of the details that correspond to that node. On the right hand side of the application are the filtering options. These affect what is visible on the map. There are two datasets that are visible in the current version of the application. The top two tabs on the right hand side of the screen split up the individual filtering options for each data set. Within these tabs are the tabs that divide the filtering options themselves. For each of these options, select the desirable filter and the map will refresh with only the nodes that fit those filters visible. The download link below the map downloads a zip file contains two csv files. These files are for each data set current available in the application. The only data that appears in these csvs is the data filtered data that is visible on the map when the download link is selected.</p>
+</div>
+<div id="system-admin-guide" class="section level3">
+<h3>System Admin Guide</h3>
+<p>Since this application is hosted by shinyapps.io, there are only a few things that need to be managed. Shinyapps.io handles all of the hosting itself. The system admin would have to handle all of the user accounts and permissions associated with those accounts for people to log in to the application with. They would also need to handle the hosting tier that is currently being used for the app. If more and more people get accounts to log into the application and use it, then the shinyapps.io hosting tier needs to be upgraded.</p>
 <hr />
 </div>
-<div id="project-presentation" class="section level1">
-<h1>Project Presentation</h1>
+</div>
+<div id="project-video-guide" class="section level1">
+<h1>Project Video Guide</h1>
+<center>
+<iframe width="630" height="504" src="https://www.useloom.com/embed/86b090dd202a46cda2a718586b4ec09f" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen>
+</iframe>
+</center>
 <hr />
 </div>
 <div id="final-project-submission" class="section level1">
 <h1>Final Project Submission</h1>
+<div id="github-source-code" class="section level3">
+<h3>GitHub Source Code</h3>
+<p><a href="https://github.com/cjsegneri/data-map/" class="uri">https://github.com/cjsegneri/data-map/</a></p>
+</div>
+<div id="link-to-demo" class="section level3">
+<h3>Link to Demo</h3>
+<p><a href="https://cjsegneri.shinyapps.io/NCMEC-Data-View/" class="uri">https://cjsegneri.shinyapps.io/NCMEC-Data-View/</a></p>
 <hr />
+</div>
 </div>
 
 
